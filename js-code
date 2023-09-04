@@ -1,0 +1,31 @@
+// random-bible-verse.js
+
+// Define an array of Bible verses
+const bibleVerses = [
+    {
+        name: "John 3:16",
+        text: "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life."
+    },
+    {
+        name: "Philippians 4:13",
+        text: "I can do all things through Christ who strengthens me."
+    },
+    // Add more verses here
+];
+
+// Function to display a random Bible verse
+function displayRandomVerse() {
+    const randomIndex = Math.floor(Math.random() * bibleVerses.length);
+    const randomVerse = bibleVerses[randomIndex];
+    
+    const verseNameElement = document.getElementById("verse-name");
+    const verseTextElement = document.getElementById("verse-text");
+    
+    if (verseNameElement && verseTextElement) {
+        verseNameElement.textContent = randomVerse.name;
+        verseTextElement.textContent = randomVerse.text;
+    }
+}
+
+// Automatically display a random verse when the library is included
+displayRandomVerse();
